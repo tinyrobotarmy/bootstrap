@@ -159,7 +159,7 @@ select:focus {
 }
 
 // Error styles
-form div.clearfix.error {
+form div.clearfix.field_with_errors {
   background: lighten($red, 57%);
   padding: 10px 0;
   margin: -10px 0 10px;
@@ -451,7 +451,7 @@ textarea[readonly] {
       }
     }
   }
-  div.clearfix.error {
+  div.clearfix.field_with_errors {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
