@@ -1,0 +1,93 @@
+/*
+Syntax error: Undefined variable: "$grayLight".
+        on line 20 of lib/patterns.scss
+
+15:   z-index: 10000;
+16:   overflow: visible;
+17: 
+18:   // Links get text shadow
+19:   a {
+20:     color: $grayLight;
+21:     text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+22:   }
+23: 
+24:   // Hover and active states
+25:   // h3 for backwards compatibility
+
+Backtrace:
+lib/patterns.scss:20
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/script/variable.rb:50:in `_perform'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/script/node.rb:40:in `perform'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:214:in `visit_prop'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:234:in `visit_rule'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:234:in `visit_rule'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:47:in `visit_root'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/root_node.rb:20:in `render'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/engine.rb:300:in `_render'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/engine.rb:247:in `render'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/plugin/compiler.rb:319:in `update_stylesheet'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/plugin/compiler.rb:181:in `block (2 levels) in update_stylesheets'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/plugin/compiler.rb:175:in `each'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/plugin/compiler.rb:175:in `block in update_stylesheets'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/plugin/compiler.rb:173:in `each'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/plugin/compiler.rb:173:in `update_stylesheets'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/plugin/compiler.rb:252:in `block (4 levels) in watch'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm/path.rb:73:in `call'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm/path.rb:73:in `run_callback'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm/path.rb:55:in `callback_action'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm/path.rb:35:in `update'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm/state/directory.rb:39:in `block in modified'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm/state/directory.rb:37:in `each'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm/state/directory.rb:37:in `modified'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm/state/directory.rb:18:in `refresh'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:17:in `each'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:17:in `block in run'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:15:in `loop'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm/backends/polling.rb:15:in `run'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm/monitor.rb:26:in `run'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/fssm-0.2.7/lib/fssm.rb:20:in `monitor'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/plugin/compiler.rb:245:in `watch'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/plugin.rb:111:in `method_missing'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/exec.rb:421:in `watch_or_update'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/exec.rb:302:in `process_result'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/exec.rb:41:in `parse'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/exec.rb:21:in `parse!'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/bin/sass:8:in `<top (required)>'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/bin/sass:19:in `load'
+/Users/adam/.rvm/gems/ruby-1.9.2-p290/bin/sass:19:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$grayLight\".\A         on line 20 of lib/patterns.scss\A \A 15:   z-index: 10000;\A 16:   overflow: visible;\A 17: \A 18:   // Links get text shadow\A 19:   a {\A 20:     color: $grayLight;\A 21:     text-shadow: 0 -1px 0 rgba(0,0,0,.25);\A 22:   }\A 23: \A 24:   // Hover and active states\A 25:   // h3 for backwards compatibility"; }
