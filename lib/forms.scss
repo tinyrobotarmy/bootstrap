@@ -50,6 +50,14 @@ label {
   color: $grayDark;
 }
 
+label.boolean {
+  display:inline;
+}
+
+abbr {
+  color:#df3a00;
+}
+
 // Shift over the inside div to align all label's relevant content
 form .input {
   margin-left: 150px;
@@ -159,19 +167,22 @@ select:focus {
 }
 
 // Error styles
-form div.clearfix.field_with_errors {
+form div.field_with_errors {
   background: lighten($red, 57%);
   padding: 10px 0;
   margin: -10px 0 10px;
   @include border-radius(4px);
+  @include clearfix();
   $error-text: desaturate(lighten($red, 25%), 25%);
   > label,
   span.help-inline,
   span.help-block {
     color: $red;
   }
+  margin-bottom: $baseline / 2;
   input,
   textarea {
+    margin-left: 0;
     border-color: $error-text;
     @include box-shadow(0 0 3px rgba(171,41,32,.25));
     &:focus {
@@ -186,6 +197,11 @@ form div.clearfix.field_with_errors {
       border-color: $error-text;
       color: darken($error-text, 10%);
     }
+  }
+  span.error {
+    color: darken($error-text, 10%);
+    font-weight:bold;
+    margin-left:1em;
   }
 }
 
@@ -275,11 +291,9 @@ textarea[readonly] {
 
 // Actions (the buttons)
 .actions {
-  background: #f5f5f5;
   margin-top: $baseline;
   margin-bottom: $baseline;
   padding: ($baseline - 1) 20px $baseline 150px;
-  border-top: 1px solid #ddd;
   @include border-radius(0 0 3px 3px);
   .secondary-action {
     float: right;
@@ -419,7 +433,10 @@ textarea[readonly] {
 
 // Stacked forms
 .form-stacked {
-  padding-left: 20px;
+  .input {
+    margin-left:0;
+  }
+  
   fieldset {
     padding-top: $baseline / 2;
   }
@@ -451,15 +468,44 @@ textarea[readonly] {
       }
     }
   }
-  div.clearfix.field_with_errors {
+  div.field_with_errors {
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 10px;
-    margin-top: 0;
-    margin-left: -10px;
+    padding-left: 5px;
+    margin-top: 5px;
+    margin-left: -5px;
+    margin-bottom: $baseline / 2;
   }
   .actions {
     margin-left: -20px;
     padding-left: 20px;
   }
 }
+
+
+/* Form hints for Hiding and Showing */
+.hint {
+   	display: none;
+    position: absolute;
+    width: 200px;
+    margin: -1em 0 0 1em;
+    border: 1px solid #C6EDF9;
+    padding: 10px 12px;
+    /* to fix IE6, I can't just declare a background-color,
+    I must do a bg image, too!  So I'm duplicating the pointer.gif
+    image, and positioning it so that it doesn't show up
+    within the box */
+    @include border_radius(3px);
+    background: #DDF4FB url(pointer.png) no-repeat -10px 5px;
+}
+
+/* The pointer image is hadded by using another span */
+.hint .hint-pointer {
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 10px;
+    height: 19px;
+    background: url(pointer.png) left top no-repeat;
+}
+

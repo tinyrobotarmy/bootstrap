@@ -538,6 +538,12 @@ label {
   text-align: right;
   color: #404040; }
 
+label.boolean {
+  display: inline; }
+
+abbr {
+  color: #df3a00; }
+
 form .input {
   margin-left: 150px; }
 
@@ -643,34 +649,48 @@ select:focus {
   box-shadow: none;
   outline: 1px dotted #666; }
 
-form div.clearfix.field_with_errors {
+form div.field_with_errors {
   background: #fae5e3;
   padding: 10px 0;
   margin: -10px 0 10px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px; }
-  form div.clearfix.field_with_errors > label,
-  form div.clearfix.field_with_errors span.help-inline,
-  form div.clearfix.field_with_errors span.help-block {
+  border-radius: 4px;
+  zoom: 1;
+  margin-bottom: 9px; }
+  form div.field_with_errors:before, form div.field_with_errors:after {
+    display: table;
+    content: "";
+    zoom: 1;
+    *display: inline; }
+  form div.field_with_errors:after {
+    clear: both; }
+  form div.field_with_errors > label,
+  form div.field_with_errors span.help-inline,
+  form div.field_with_errors span.help-block {
     color: #9d261d; }
-  form div.clearfix.field_with_errors input,
-  form div.clearfix.field_with_errors textarea {
+  form div.field_with_errors input,
+  form div.field_with_errors textarea {
+    margin-left: 0;
     border-color: #c87872;
     -webkit-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
     -moz-box-shadow: 0 0 3px rgba(171, 41, 32, 0.25);
     box-shadow: 0 0 3px rgba(171, 41, 32, 0.25); }
-    form div.clearfix.field_with_errors input:focus,
-    form div.clearfix.field_with_errors textarea:focus {
+    form div.field_with_errors input:focus,
+    form div.field_with_errors textarea:focus {
       border-color: #b9554d;
       -webkit-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
       -moz-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
       box-shadow: 0 0 6px rgba(171, 41, 32, 0.5); }
-  form div.clearfix.field_with_errors .input-prepend span.add-on,
-  form div.clearfix.field_with_errors .input-append span.add-on {
+  form div.field_with_errors .input-prepend span.add-on,
+  form div.field_with_errors .input-append span.add-on {
     background: #f4c8c5;
     border-color: #c87872;
     color: #b9554d; }
+  form div.field_with_errors span.error {
+    color: #b9554d;
+    font-weight: bold;
+    margin-left: 1em; }
 
 .input-mini,
 input.mini,
@@ -835,11 +855,9 @@ textarea[readonly] {
   cursor: not-allowed; }
 
 .actions {
-  background: #f5f5f5;
   margin-top: 18px;
   margin-bottom: 18px;
   padding: 17px 20px 18px 150px;
-  border-top: 1px solid #ddd;
   -webkit-border-radius: 0 0 3px 3px;
   -moz-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px; }
@@ -957,40 +975,67 @@ textarea[readonly] {
   .inputs-list input[type=checkbox] {
     margin-bottom: 0; }
 
-.form-stacked {
-  padding-left: 20px; }
-  .form-stacked fieldset {
-    padding-top: 9px; }
-  .form-stacked legend {
-    padding-left: 0; }
-  .form-stacked label {
-    display: block;
-    float: none;
-    width: auto;
-    font-weight: bold;
-    text-align: left;
-    line-height: 20px;
+.form-stacked .input {
+  margin-left: 0; }
+.form-stacked fieldset {
+  padding-top: 9px; }
+.form-stacked legend {
+  padding-left: 0; }
+.form-stacked label {
+  display: block;
+  float: none;
+  width: auto;
+  font-weight: bold;
+  text-align: left;
+  line-height: 20px;
+  padding-top: 0; }
+.form-stacked .clearfix {
+  margin-bottom: 9px; }
+  .form-stacked .clearfix div.input {
+    margin-left: 0; }
+.form-stacked .inputs-list {
+  margin-bottom: 0; }
+  .form-stacked .inputs-list li {
     padding-top: 0; }
-  .form-stacked .clearfix {
-    margin-bottom: 9px; }
-    .form-stacked .clearfix div.input {
-      margin-left: 0; }
-  .form-stacked .inputs-list {
-    margin-bottom: 0; }
-    .form-stacked .inputs-list li {
+    .form-stacked .inputs-list li label {
+      font-weight: normal;
       padding-top: 0; }
-      .form-stacked .inputs-list li label {
-        font-weight: normal;
-        padding-top: 0; }
-  .form-stacked div.clearfix.field_with_errors {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    margin-top: 0;
-    margin-left: -10px; }
-  .form-stacked .actions {
-    margin-left: -20px;
-    padding-left: 20px; }
+.form-stacked div.field_with_errors {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  margin-top: 5px;
+  margin-left: -5px;
+  margin-bottom: 9px; }
+.form-stacked .actions {
+  margin-left: -20px;
+  padding-left: 20px; }
+
+/* Form hints for Hiding and Showing */
+.hint {
+  display: none;
+  position: absolute;
+  width: 200px;
+  margin: -1em 0 0 1em;
+  border: 1px solid #C6EDF9;
+  padding: 10px 12px;
+  /* to fix IE6, I can't just declare a background-color,
+  I must do a bg image, too!  So I'm duplicating the pointer.gif
+  image, and positioning it so that it doesn't show up
+  within the box */
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #ddf4fb url(pointer.png) no-repeat -10px 5px; }
+
+/* The pointer image is hadded by using another span */
+.hint .hint-pointer {
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 10px;
+  height: 19px;
+  background: url(pointer.png) left top no-repeat; }
 
 /*
  * Tables.less
