@@ -10,10 +10,11 @@ error span is also styled up seamlessly.
 
 I have added a hint class to provide a bubble beside the field to contain the hint and a javascript file called dynamic_hints.js to show the hints automatically on focus of the field. This requires that a document ready method
 for the form something like this:
+<pre>
 $(document).ready(function(){
    new DynamicHints($('form'));
 });
-
+</pre>
 
 Usage
 -----
