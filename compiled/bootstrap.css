@@ -1019,14 +1019,10 @@ textarea[readonly] {
   margin: -1em 0 0 1em;
   border: 1px solid #C6EDF9;
   padding: 10px 12px;
-  /* to fix IE6, I can't just declare a background-color,
-  I must do a bg image, too!  So I'm duplicating the pointer.gif
-  image, and positioning it so that it doesn't show up
-  within the box */
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background: #ddf4fb url(pointer.png) no-repeat -10px 5px; }
+  background-color: #DDF4FB; }
 
 /* The pointer image is hadded by using another span */
 .hint .hint-pointer {
