@@ -538,7 +538,7 @@ label {
   text-align: right;
   color: #404040; }
 
-label.boolean {
+label.boolean, .form-stacked label.boolean {
   display: inline; }
 
 abbr {
@@ -1631,7 +1631,7 @@ footer {
   .page-header h1 {
     margin-bottom: 8px; }
 
-.btn.danger, .btn.danger:hover, .btn.error, .btn.error:hover, .btn.success, .btn.success:hover, .btn.info, .btn.info:hover,
+.btn.danger, .btn.danger:hover, .btn.error, .btn.error:hover, .btn.success, .btn.success:hover, .btn.info, .btn.info:hover, input[type=submit].danger, input[type=submit].danger:hover, input[type=submit].error, input[type=submit].error:hover, input[type=submit].success, input[type=submit].success:hover, input[type=submit].info, input[type=submit].info:hover,
 .alert-message.danger,
 .alert-message.danger:hover,
 .alert-message.error,
@@ -1641,7 +1641,7 @@ footer {
 .alert-message.info,
 .alert-message.info:hover {
   color: white; }
-.btn.danger, .btn.error,
+.btn.danger, .btn.error, input[type=submit].danger, input[type=submit].error,
 .alert-message.danger,
 .alert-message.error {
   background-color: #c43c35;
@@ -1657,7 +1657,7 @@ footer {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   border-color: #c43c35 #c43c35 #882a25;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%); }
-.btn.success,
+.btn.success, input[type=submit].success,
 .alert-message.success {
   background-color: #57a957;
   background-repeat: repeat-x;
@@ -1672,7 +1672,7 @@ footer {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   border-color: #57a957 #57a957 #3d773d;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%); }
-.btn.info,
+.btn.info, input[type=submit].info,
 .alert-message.info {
   background-color: #339bb9;
   background-repeat: repeat-x;
@@ -1688,7 +1688,7 @@ footer {
   border-color: #339bb9 #339bb9 #22697d;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%); }
 
-.btn {
+.btn, input[type=submit] {
   cursor: pointer;
   display: inline-block;
   background-color: #e6e6e6;
@@ -1718,13 +1718,13 @@ footer {
   -ms-transition: 0.1s linear all;
   -o-transition: 0.1s linear all;
   transition: 0.1s linear all; }
-  .btn:hover {
+  .btn:hover, input[type=submit]:hover {
     background-position: 0 -15px;
     color: #333;
     text-decoration: none; }
-  .btn:focus {
+  .btn:focus, input[type=submit]:focus {
     outline: 1px dotted #666; }
-  .btn.primary {
+  .btn.primary, input[type=submit].primary {
     color: white;
     background-color: #0064cd;
     background-repeat: repeat-x;
@@ -1739,11 +1739,11 @@ footer {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     border-color: #0064cd #0064cd #003f81;
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%); }
-  .btn:active {
+  .btn:active, input[type=submit]:active {
     -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05); }
-  .btn.disabled {
+  .btn.disabled, input[type=submit].disabled {
     cursor: default;
     background-image: none;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -1754,7 +1754,7 @@ footer {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none; }
-  .btn[disabled] {
+  .btn[disabled], input[type=submit][disabled] {
     cursor: default;
     background-image: none;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -1765,14 +1765,14 @@ footer {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none; }
-  .btn.large {
+  .btn.large, input[type=submit].large {
     font-size: 15px;
     line-height: normal;
     padding: 9px 14px 9px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px; }
-  .btn.small {
+  .btn.small, input[type=submit].small {
     padding: 7px 9px 7px;
     font-size: 11px; }
 
@@ -1780,7 +1780,7 @@ footer {
 :root .btn {
   border-radius: 0 \0; }
 
-button.btn::-moz-focus-inner,
+button.btn::-moz-focus-inner, input[type=submit]::-moz-focus-inner,
 input[type=submit].btn::-moz-focus-inner {
   padding: 0;
   border: 0; }
@@ -1876,40 +1876,49 @@ input[type=submit].btn::-moz-focus-inner {
       background-color: #ddf4fb;
       border-color: #c6edf9; }
 
-.pagination {
+ul.pagination, ol.pagination {
   height: 36px;
-  margin: 18px 0; }
-  .pagination ul {
+  margin: 18px 0;
+  float: left;
+  border: 1px solid #ddd;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  zoom: 1;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }
+  ul.pagination:before, ul.pagination:after, ol.pagination:before, ol.pagination:after {
+    display: table;
+    content: "";
+    zoom: 1;
+    *display: inline; }
+  ul.pagination:after, ol.pagination:after {
+    clear: both; }
+  ul.pagination li, ol.pagination li {
+    display: inline;
     float: left;
-    margin: 0;
-    border: 1px solid #ddd;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }
-  .pagination li {
-    display: inline; }
-  .pagination a {
-    float: left;
-    padding: 0 14px;
-    line-height: 34px;
+    line-height: 36px;
     border-right: 1px solid;
     border-right-color: #ddd;
     border-right-color: rgba(0, 0, 0, 0.15);
     *border-right-color: #ddd;
-    /* IE6-7 */
-    text-decoration: none; }
-  .pagination a:hover,
-  .pagination .active a {
-    background-color: #c7eefe; }
-  .pagination .disabled a,
-  .pagination .disabled a:hover {
+    /* IE6-7 */ }
+  ul.pagination a, ol.pagination a {
+    text-decoration: none;
+    display: block;
+    padding: 0 14px; }
+  ul.pagination a:hover,
+  ul.pagination li.active, ol.pagination a:hover, ol.pagination li.active {
+    background-color: #c7eefe;
+    padding: 0 14px; }
+  ul.pagination li.disabled,
+  ul.pagination li.disabled:hover, ol.pagination li.disabled, ol.pagination li.disabled:hover {
     background-color: transparent;
-    color: #bfbfbf; }
-  .pagination .next a {
+    color: #bfbfbf;
+    padding: 0 14px; }
+  ul.pagination .next_page, ol.pagination .next_page {
     border: 0; }
 
 .well {

@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$grayLight".
-        on line 20 of lib/patterns.scss
+        on line 21 of lib/patterns.scss
 
-15:   z-index: 10000;
-16:   overflow: visible;
-17: 
-18:   // Links get text shadow
-19:   a {
-20:     color: $grayLight;
-21:     text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-22:   }
-23: 
-24:   // Hover and active states
-25:   // h3 for backwards compatibility
+16:   z-index: 10000;
+17:   overflow: visible;
+18: 
+19:   // Links get text shadow
+20:   a {
+21:     color: $grayLight;
+22:     text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+23:   }
+24: 
+25:   // Hover and active states
+26:   // h3 for backwards compatibility
 
 Backtrace:
-lib/patterns.scss:20
+lib/patterns.scss:21
 /Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/script/variable.rb:50:in `_perform'
 /Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/script/node.rb:40:in `perform'
 /Users/adam/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.10/lib/sass/tree/visitors/perform.rb:214:in `visit_prop'
@@ -90,4 +90,4 @@ lib/patterns.scss:20
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$grayLight\".\A         on line 20 of lib/patterns.scss\A \A 15:   z-index: 10000;\A 16:   overflow: visible;\A 17: \A 18:   // Links get text shadow\A 19:   a {\A 20:     color: $grayLight;\A 21:     text-shadow: 0 -1px 0 rgba(0,0,0,.25);\A 22:   }\A 23: \A 24:   // Hover and active states\A 25:   // h3 for backwards compatibility"; }
+  content: "Syntax error: Undefined variable: \"$grayLight\".\A         on line 21 of lib/patterns.scss\A \A 16:   z-index: 10000;\A 17:   overflow: visible;\A 18: \A 19:   // Links get text shadow\A 20:   a {\A 21:     color: $grayLight;\A 22:     text-shadow: 0 -1px 0 rgba(0,0,0,.25);\A 23:   }\A 24: \A 25:   // Hover and active states\A 26:   // h3 for backwards compatibility"; }

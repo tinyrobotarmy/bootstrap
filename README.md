@@ -8,6 +8,15 @@ I have also modified many of the form class names and style approach to be more 
 the normal rails field_with_errors class but also that the error message that simple_form generates in it's
 error span is also styled up seamlessly.
 
+I have modified the input[type=submit] to be the same as a link with the class .btn so that submit buttons are styled like buttons by
+default.
+
+I have modified the pagination to be a bit more opinionated. It now works only on list based links (ordered or unordered). It respects the
+classes that will_paginate outputs, although users of this style will need to apply a list based link renderer since will paginate seems
+to have the ridiculous opinion that a list of links should not by default have semantically correct markup but instead should be
+outputted bare into a div. You can find a pretty reasonable description of how to implement a lit based link renderer 
+<a href="http://thewebfellas.com/blog/2008/8/3/roll-your-own-pagination-links-with-will_paginate">here</a>.
+
 I have added a hint class to provide a bubble beside the field to contain the hint and a javascript file called dynamic_hints.js to show the hints automatically on focus of the field. This requires that a document ready method
 for the form something like this:
 <pre>
@@ -19,7 +28,7 @@ $(document).ready(function(){
 Usage
 -----
 
-You can use this port of the Twitter Bootstrap in one of two ways: just drop the compiled CSS into any new project or if you are already using SASS just include the SASS files on a case by case basis into your project. The files are named in a fairly self explanatory way so it should be pretty simple to work out what you need. 
+You can use this port of the Twitter Bootstrap in one of two ways: just drop the compiled CSS (find it in compiled/bootstrap.css) into any new project or if you are already using SASS just include the SASS files on a case by case basis into your project. The files are named in a fairly self explanatory way so it should be pretty simple to work out what you need. 
 
 
 ``` html

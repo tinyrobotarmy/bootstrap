@@ -50,7 +50,7 @@ label {
   color: $grayDark;
 }
 
-label.boolean {
+label.boolean, .form-stacked label.boolean {
   display:inline;
 }
 
